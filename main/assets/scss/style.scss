@@ -1,0 +1,241 @@
+/*=============== SCSS ===============*/
+@forward 'globals'; // Importing globals
+/*=============== GOOGLE FONTS / LOCAL FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'kyivtype_sansregular3';
+    src: url('/main/fonts/kyivtypesans-regular3-webfont.woff') format('woff2'),
+            url('/main/fonts/kyivtypesans-regular3-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.btn-primary {
+  background: var(--btn-color);
+  border: none;
+  border-radius: 2.625rem;
+  color: var(--main-color);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--font-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*=============== Phone CSS ===============*/
+
+.wood {
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.wood-stack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 73%;
+}
+
+.logo {
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
+  width: 35%;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header-wrapper .toggler {
+  position: fixed;
+  top: 2.813rem;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  opacity: 0;
+}
+
+.nav-wrapper .hamburger {
+  position: absolute;
+  top: 2.813rem;
+  right: 0;
+  z-index: 1;
+  width: 3.75rem;
+  height: 4.063rem;
+  padding: 1rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-wrapper .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transition: all 0.4s ease-in;
+}
+/*=============== Styling bottom and top lines of the menu ===============*/
+
+.nav-wrapper .hamburger > div:before,
+.nav-wrapper .hamburger > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 45%;
+  height: 4px;
+  background-color: inherit;
+  border-radius: 100px;
+  transition: 1s;
+}
+
+.nav-wrapper .hamburger > div:before{
+  left: 0;
+}
+
+.nav-wrapper .hamburger > div:after {
+  top: 10px;
+  right: 0;
+}
+/*=============== Animation of the hamburger ===============*/
+
+.header-wrapper .toggler:checked + .nav-wrapper .hamburger > div:before,
+.header-wrapper .toggler:checked + .nav-wrapper .hamburger > div:after {
+  width: 100%;
+  transition: 1s;
+}
+
+.menu-wrapper .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-wrapper .menu > div {
+  background-color: var(--body-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.nav-wrapper .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.nav-wrapper .menu > div > div > ul > li {
+  list-style: none;
+  color: var(--main-color);
+  font-size: var(--body-font-size);
+  font-family: var(--nav-font);
+  padding: 1rem;
+}
+
+.nav-wrapper .menu > div > div > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.4s ease;
+}
+
+.menu, .nav-wrapper {
+  height: 0;
+}
+/*=============== Animation for checked state ===============*/
+
+.header-wrapper .toggler:checked ~ .nav-wrapper .menu {
+  visibility: visible;
+}
+
+.header-wrapper .toggler:checked ~ .nav-wrapper {
+  z-index: 3;
+}
+
+.header-wrapper .toggler:checked ~ .nav-wrapper .menu > div {
+  transform: scale(1);
+}
+
+.header-wrapper .toggler:checked ~ .nav-wrapper .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+/*=============== Header section ===============*/
+
+.containers {
+  position: relative;
+  width: 90%;
+  height: 17.85rem;
+
+  top: 31vw;
+  background-color: #1E0C06;
+  box-shadow: 0px 4px 52px rgba(245, 245, 245, 0.17);
+  border-radius: 14px 0px 0px 14px;
+}
+
+.btn-order {
+  width: 5.375rem;
+  height: 1.313rem;
+}
+
+.containers p {
+  color: var(--secondary-color);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);;
+  font-weight: var(--font-medium);
+  line-height: 0;
+}
+
+.containers > h1 {
+  line-height: 1.5rem;
+}
+
+.divider {
+  height: 2px;
+  width: 98%;
+  background-color: var(--main-color);
+}
+
+.head_comp_imagery {
+  position: absolute;
+  top: 7.5rem;
+  right: 1rem;
+  width: 20rem;
+}
