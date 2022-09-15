@@ -19,7 +19,7 @@ a, a:visited, a:active {
 
 body {
     font-family: 'Inter';
-    font-size: 15px;
+    font-size: var(--body-font-size);
     font-weight: var(--font-medium);
     color: var(--main-color);
 }
@@ -30,8 +30,8 @@ body {
         --body-font: 'Inter';
         --h1-font: 'kyivtype_sansregular3';
       
-        --h1-font-size: 1.875rem;
-        --body-font-size: 0.938rem;
+        --h1-font-size: 4vh;
+        --body-font-size: 1.9vh;
       
         /*========== Font weight ==========*/
         --font-bold: 700;

@@ -26,6 +26,14 @@
   justify-content: center;
 }
 
+.rounded-images {
+  border-radius: 14px;
+}
+
+span {
+  font-weight: bold;
+}
+
 /*=============== Phone CSS ===============*/
 
 .wood {
@@ -220,7 +228,7 @@
   font-family: var(--body-font);
   font-size: var(--body-font-size);;
   font-weight: var(--font-medium);
-  line-height: 0;
+  line-height: 6px;
 }
 
 .containers > h1 {
@@ -235,7 +243,139 @@
 
 .head_comp_imagery {
   position: absolute;
-  top: 7.5rem;
+  top: 16vh;
   right: 1rem;
-  width: 20rem;
+  width: 40vh;
+}
+
+/*=============== wood-we-work section ===============*/
+
+.wood-we-work {
+  position: relative;
+  top: 45vh;
+  left: 1.25rem;
+  max-width: 94%;
+  overflow-x: auto;
+}
+
+.scrollable-media {
+  display: flex;
+  width: fit-content;
+}
+
+.list-group-item {
+  color: var(--main-color);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+}
+
+.card, .list-group-item {
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.list-group-item > img {
+  padding-right: 0.5rem;
+}
+
+/*=============== our-work section ===============*/
+
+.our-work {
+  position: relative;
+  top: 32rem;
+  left: 1.25rem;
+  max-width: 94%;
+}
+
+/*=============== working-with-us section ===============*/
+
+.working-with-us {
+  position: relative;
+  top: 39rem;
+  left: 1.25rem;
+  max-width: 94%;
+}
+
+.working-with-us p {
+  max-width: 80%;
+}
+
+.btn-consultation {
+  width: 13.688rem;
+  height: 2.063rem;
+}
+
+/*=============== about-us section ===============*/
+
+.about-us {
+  position: relative;
+  top: 45rem;
+  max-width: 94%;
+  min-height: 42.125rem;
+  background-color: #1E0C06;
+  filter: drop-shadow(0px 4px 52px rgba(245, 245, 245, 0.17));
+  border-radius: 0px 42px 42px 0px;
+}
+
+.about-us p {
+  max-width: 85%;
+}
+
+/*=============== questions section ===============*/
+
+.questions {
+  position: relative;
+  top: 49rem;
+  max-width: 94%;
+}
+
+input[type=text], input[type=tel], textarea {
+  border: 2px solid var(--btn-color);
+  border-radius: 42px;
+  background-color: transparent;
+  margin-bottom: 12px;
+  width: 20.25rem;
+}
+
+textarea {
+  border-radius: 14px;
+  min-height: 8.375rem;
+}
+
+.btn-send {
+  width: 5.75rem;
+  height: 2.125rem;
+}
+
+/*=============== footer section ===============*/
+
+footer {
+  position: relative;
+  bottom: -100vh;
+  width: 100vw;
+  min-height: 22rem;
+  background-color: #222021;
+  box-shadow: 0px -6px 52px rgba(245, 245, 245, 0.17);
+
+
+  font-family: var(--nav-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--font-medium);
+  line-height: 21px;
+  color: var(--main-color);
+}
+
+.footer_logo {
+  width: 35%;
+}
+
+.footer-content {
+  display: grid;
+  justify-items: center;
+}
+
+.footer_text {
+  max-width: 75%;
+  text-align: center;
 }
