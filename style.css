@@ -1,0 +1,421 @@
+body {
+  background-image: url("main/assets/images/phone-wood-bg.svg");
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 4rem;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu li {
+  list-style-type: none;
+  margin: 0 2rem;
+}
+
+.nav-menu li a {
+  color: white;
+}
+
+.toggler {
+  position: fixed;
+  top: 2.813rem;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  opacity: 0;
+
+  display: none;
+}
+
+.hamburger {
+  position: absolute;
+  top: 2.813rem;
+  right: 0;
+  z-index: 1;
+  width: 3.75rem;
+  height: 4.063rem;
+  padding: 1rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  display: none;
+}
+
+.hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 0.25rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transition: all 0.4s ease-in;
+}
+.hamburger > div:before,
+.hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 45%;
+  height: 4px;
+  background-color: inherit;
+  border-radius: 100px;
+  transition: 1s;
+}
+.hamburger > div:before {
+  left: 0;
+}
+
+.hamburger > div:after {
+  top: 10px;
+  right: 0;
+}
+
+.background-wood-image {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 700px;
+}
+
+.hero-section {
+  width: 90%;
+  background-color: #1e0c06;
+  box-shadow: 0px 4px 52px rgba(245, 245, 245, 0.17);
+  border-radius: 14px 0px 0px 14px;
+  margin-left: auto;
+  padding: 10rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-left h1 {
+  font-size: 4rem;
+}
+.hero-left p {
+  color: #ffdbbb;
+}
+.hero-left button {
+  padding: 1.5rem 2rem;
+}
+
+.hero-right {
+  position: relative;
+}
+.hero-right div {
+  position: absolute;
+}
+
+.hero-right div:nth-child(1) {
+  top: -100px;
+  right: 0;
+}
+
+.hero-right div:nth-child(2) {
+  top: 200px;
+  right: 40px;
+}
+
+.hero-right div:nth-child(3) {
+  top: 150px;
+  right: 400px;
+}
+
+.border-divide {
+  border: 1px solid white;
+  margin-right: 300px;
+}
+
+.section {
+  margin: 8rem 6rem;
+}
+
+.section h1 {
+  font-size: 4rem;
+}
+
+.wood-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 2rem;
+}
+
+.wood-column {
+  width: fit-content;
+  text-align: center;
+}
+
+.quality-list {
+  text-align: start;
+  list-style: none;
+}
+
+.carousel {
+  margin-top: 4rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.advantage-showcase {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.advantage-showcase img {
+  width: 100%;
+}
+.advantage-showcase p {
+  margin: 2rem 4rem;
+}
+
+.about-section {
+  max-width: 94%;
+  background-color: #1e0c06;
+  filter: drop-shadow(0px 4px 52px rgba(245, 245, 245, 0.17));
+  border-radius: 0px 42px 42px 0px;
+
+  padding: 10rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-left {
+  width: 50%;
+}
+
+.about-right {
+  position: relative;
+}
+
+.float-images {
+  position: absolute;
+  top: -200px;
+  right: 0;
+}
+
+.float-images img {
+  position: absolute;
+}
+
+.float-images img:nth-child(1) {
+  top: 0;
+  right: 100px;
+}
+.float-images img:nth-child(2) {
+  top: 100px;
+  right: 200px;
+}
+.float-images img:nth-child(3) {
+  top: 260px;
+  right: 100px;
+  z-index: -1;
+}
+
+.contact-section {
+  margin: 6rem 10rem;
+}
+
+.contact-section h1 {
+  text-align: right;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wood-image-container {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: -200px;
+  height: 300px;
+}
+
+.wood-image-container img {
+  height: 100%;
+}
+
+footer {
+  position: relative;
+  bottom: unset;
+  width: unset;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    margin-top: 0;
+    background-color: rgb(34, 32, 33);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .nav-menu li {
+    margin: 3rem 0;
+  }
+  .toggler:checked ~ .nav-menu {
+    transform: scale(1);
+  }
+  .hamburger {
+    z-index: 60;
+  }
+  .toggler {
+    z-index: 70;
+  }
+  .hamburger,
+  .toggler {
+    display: block;
+  }
+
+  .wood-showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .advantage-showcase {
+    flex-direction: column-reverse;
+  }
+
+  .wood-image-container {
+    display: none;
+  }
+
+  .contact-row {
+    flex-direction: column;
+  }
+
+  .contact-row form {
+    margin-top: 1rem;
+  }
+  .contact-row p {
+    margin-top: 1rem;
+  }
+
+  .wood-section {
+    margin-top: 30rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding-bottom: 20rem;
+  }
+
+  .float-images {
+    top: 50px;
+  }
+
+  .contact-section {
+    margin-top: 20rem;
+  }
+
+  .about-left {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .hero-section {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+  }
+
+  .hero-right div:nth-child(3) {
+    top: 150px;
+    right: 300px;
+  }
+  .background-wood-image {
+    width: 300px;
+    height: auto;
+  }
+
+  .advantage-showcase p {
+    margin: 1rem;
+  }
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    margin: 4rem 2rem;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+  }
+  .wood-section {
+    margin-top: 30rem;
+  }
+
+  .wood-showcase {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .float-images {
+    display: none;
+  }
+
+  .about-section {
+    padding: 6rem 2rem;
+  }
+  footer {
+    flex-direction: column;
+  }
+
+  footer div {
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .hero-right div {
+    display: none;
+  }
+
+  .wood-section {
+    margin-top: 10rem;
+  }
+}
